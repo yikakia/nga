@@ -13,7 +13,7 @@ func main() {
 		NgaPassportCid: "4321",
 	})
 
-	thread, err := c.Thread("706")
+	thread, err := c.Thread("706", nil)
 	if err != nil {
 		log.Fatal(err)
 	}

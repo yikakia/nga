@@ -6,9 +6,10 @@ import (
 	"github.com/yikakia/nga/resp"
 )
 
-func (c *Client) Thread(fid string) (*resp.Thread, error) {
+func (c *Client) Thread(fid string, params map[string]string) (*resp.Thread, error) {
 	get, err := c.getDefaultClient().
 		SetQueryParam("fid", fid).
+		SetQueryParams(params).
 		Get(c.BaseUrl + "/thread.php")
 	if err != nil {
 		return nil, err
