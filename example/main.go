@@ -13,7 +13,7 @@ func main() {
 		NgaPassportCid: "4321",
 	})
 
-	thread, err := c.Thread("706", nil)
+	thread, err := c.Thread("", nga.WithQueryParam("stid", "47206901"))
 	if err != nil {
 		log.Fatal(err)
 	}
